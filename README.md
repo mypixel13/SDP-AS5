@@ -11,11 +11,6 @@ Each technology is an interchangeable algorithm that calculates concrete volume,
 | Context | `HouseBuilder` (`setFoundationStrategy` switches at runtime) |
 | Client | `Main` + `FoundationSelector` (soil -> strategy lookup table) |
 
-## Build & run
-```
-javac -d out src/housebuilder/foundation/*.java
-java -cp out housebuilder.foundation.Main
-```
 
 ## Clean Code principles applied
 1. **Polymorphism instead of conditionals** — `HouseBuilder` has no if/switch on foundation type; the selection is an `EnumMap` lookup in the client.
